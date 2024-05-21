@@ -1,0 +1,152 @@
+/* Common styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+ul {
+  margin: 20px 0;
+  padding: 0;
+  list-style-type: none;
+  width: 100%;
+  max-width: 400px;
+  background: #2c2c2c;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #3a3a3a;
+  font-size: 18px;
+  color: #e0e0e0;
+  transition: 0.2s;
+  border-bottom: 1px solid #555;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 8px;
+  margin: 8px 12px;
+}
+
+ul li:nth-child(odd) {
+  background: #333;
+}
+
+ul li:hover {
+  background: #4b4b4b;
+}
+
+ul li.checked {
+  background: #555;
+  color: #bbb;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #bbb;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px;
+  color: #ccc;
+  cursor: pointer;
+  transition: 0.2s;
+  background: transparent;
+  border: none;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+.header {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+  border-radius: 8px 8px 0 0;
+}
+
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+input {
+  margin: 0;
+  border: none;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+  color: white;
+  background: #444;
+  border-radius: 0 0 0 8px;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #6a11cb;
+  color: white;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0 0 8px 0;
+}
+
+.addBtn:hover {
+  background: #2575fc;
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 600px) {
+  ul {
+    max-width: 300px;
+  }
+
+  input {
+    width: 60%;
+  }
+
+  .addBtn {
+    width: 40%;
+    border-radius: 0 0 8px 8px;
+  }
+}
